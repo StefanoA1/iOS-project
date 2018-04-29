@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import iOS
+@testable import myFoodSpots
 
 class iOSTests: XCTestCase {
     
