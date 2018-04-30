@@ -10,7 +10,7 @@ import UIKit
 
 class detailViewController: UIViewController {
 
-    var book : Books?
+    var book : Spots?
     
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblAuthor: UILabel!

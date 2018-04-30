@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,45 +15,58 @@
         <!--Table View Controller-->
         <scene sceneID="Nbv-NV-Uoy">
             <objects>
-                <tableViewController id="SEG-A9-vqR" customClass="tableViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="SEG-A9-vqR" customClass="tableViewController" customModule="myFoodSpots" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="x8a-Gh-4Vv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="100" id="PjN-d5-we7" customClass="customTableViewCell" customModule="iOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="100" id="PjN-d5-we7" customClass="customTableViewCell" customModule="myFoodSpots" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PjN-d5-we7" id="Njp-Q4-tPd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="myImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U51-mi-WpK">
-                                            <rect key="frame" x="0.0" y="-15" width="375" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U51-mi-WpK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cP-6l-eyL">
-                                            <rect key="frame" x="16" y="11" width="169" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title                  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cP-6l-eyL">
+                                            <rect key="frame" x="12" y="11" width="156" height="32"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v70-u4-Mp5">
-                                            <rect key="frame" x="295" y="11" width="80" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v70-u4-Mp5">
+                                            <rect key="frame" x="288.5" y="11" width="51.5" height="32"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azT-Mf-sMP">
-                                            <rect key="frame" x="16" y="50" width="81" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azT-Mf-sMP">
+                                            <rect key="frame" x="12" y="50" width="91" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3cP-6l-eyL" firstAttribute="baseline" secondItem="v70-u4-Mp5" secondAttribute="baseline" id="1x6-Ko-wtr"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="v70-u4-Mp5" secondAttribute="bottom" constant="46" id="54S-Lr-CJo"/>
+                                        <constraint firstItem="3cP-6l-eyL" firstAttribute="leading" secondItem="azT-Mf-sMP" secondAttribute="leading" id="5zn-2L-0dQ"/>
+                                        <constraint firstItem="v70-u4-Mp5" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Njp-Q4-tPd" secondAttribute="leading" constant="288" id="6Vy-Wh-u2g"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="v70-u4-Mp5" secondAttribute="trailing" constant="19" id="6al-mN-drx"/>
+                                        <constraint firstItem="v70-u4-Mp5" firstAttribute="firstBaseline" secondItem="3cP-6l-eyL" secondAttribute="firstBaseline" id="Gyb-Ln-Cjf"/>
+                                        <constraint firstItem="3cP-6l-eyL" firstAttribute="leading" secondItem="Njp-Q4-tPd" secondAttribute="leadingMargin" constant="-4" id="Iii-SN-oiX"/>
+                                        <constraint firstItem="azT-Mf-sMP" firstAttribute="top" secondItem="3cP-6l-eyL" secondAttribute="bottom" constant="7" id="KhJ-lh-q0U"/>
+                                        <constraint firstItem="U51-mi-WpK" firstAttribute="leading" secondItem="Njp-Q4-tPd" secondAttribute="leading" id="Mj0-ov-pg7"/>
+                                        <constraint firstItem="U51-mi-WpK" firstAttribute="top" secondItem="Njp-Q4-tPd" secondAttribute="top" id="dCl-hN-u3A"/>
+                                        <constraint firstItem="U51-mi-WpK" firstAttribute="height" secondItem="Njp-Q4-tPd" secondAttribute="height" id="iKq-UE-b3F"/>
+                                        <constraint firstItem="3cP-6l-eyL" firstAttribute="top" secondItem="Njp-Q4-tPd" secondAttribute="topMargin" id="tzc-ZM-caB"/>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="azT-Mf-sMP" secondAttribute="trailing" constant="272" id="vTf-Nj-bqB"/>
+                                        <constraint firstAttribute="trailing" secondItem="U51-mi-WpK" secondAttribute="trailing" id="yGW-Rf-dtd"/>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="3cP-6l-eyL" secondAttribute="trailing" constant="207" id="zvB-Oo-X7c"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="Author" destination="azT-Mf-sMP" id="XLc-ug-f34"/>
@@ -73,12 +88,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vcu-B1-QR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="-9.4452773613193415"/>
+            <point key="canvasLocation" x="169.56521739130437" y="-9.7826086956521738"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="p1V-k0-tuT">
             <objects>
-                <viewController id="LJn-DA-fPy" customClass="detailViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LJn-DA-fPy" customClass="detailViewController" customModule="myFoodSpots" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BmA-GW-9ZP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

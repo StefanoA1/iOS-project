@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Books { // : superclass (not the case here)
+class Spots { // : superclass (not the case here)
 
     var author : String?
     var title : String?
