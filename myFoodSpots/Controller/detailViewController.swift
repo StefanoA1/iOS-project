@@ -10,22 +10,24 @@ import UIKit
 
 class detailViewController: UIViewController {
 
-    var book : Spots?
+    var spot : Spots?
     
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblAuthor: UILabel!
-    @IBOutlet weak var lblPublisher: UILabel!
+    @IBOutlet weak var myView: UIView!
+    @IBOutlet weak var lblDish: UILabel!
+    @IBOutlet weak var lblRestaurant: UILabel!
+    @IBOutlet weak var lblPlace: UILabel!
+    @IBOutlet weak var bigImage: UIImageView!
     @IBOutlet weak var lblArea: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        lblTitle.text = book?.title
-        lblAuthor.text = book?.author
-        lblPublisher.text = book?.year
-        lblArea.text = book?.description
-        // myimage.image = UImage(named: (book?img)!)
-        
+        let backgroundImage = UIImage(named: "hipster")
+        myView = UIImageView(image: backgroundImage)
+        lblDish.text = spot?.dish
+        lblRestaurant.text = spot?.restaurant
+        lblPlace.text = spot?.place
+        lblArea.text = spot?.description
+        bigImage.image = UIImage(named: (spot?.image)!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +35,6 @@ class detailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

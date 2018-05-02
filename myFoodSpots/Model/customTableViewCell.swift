@@ -9,15 +9,12 @@
 import UIKit
 
 class customTableViewCell: UITableViewCell {
-
-//    var author : String?
-//    var title : String?
-//    var year : String?
-//    var description : String?
     
-    @IBOutlet weak var Title: UILabel!
-    @IBOutlet weak var Author: UILabel!
-    @IBOutlet weak var Year: UILabel!
+
+    @IBOutlet weak var Dish: UILabel!
+    @IBOutlet weak var Restaurant: UILabel!
+    @IBOutlet weak var Place: UILabel!
+    @IBOutlet weak var myImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

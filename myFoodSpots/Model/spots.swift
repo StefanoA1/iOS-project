@@ -10,19 +10,19 @@ import Foundation
 
 class Spots { // : superclass (not the case here)
 
-    var author : String?
-    var title : String?
-    var year : String?
+    var restaurant : String?
+    var dish : String?
+    var place : String?
     var description : String?
     var image : String?
     
-    init(author:String, title:String, year:String, description:String) {
+    init(restaurant:String, dish:String, place:String, description:String, image:String) {
         
-        self.author = author
-        self.title = title
-        self.year = year
+        self.restaurant = restaurant
+        self.dish = dish
+        self.place = place
         self.description = description
-//        self.image = image
+        self.image = image
     }
     
 }
