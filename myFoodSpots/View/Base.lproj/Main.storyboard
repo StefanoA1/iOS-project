@@ -49,16 +49,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place               " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOv-YP-6tc">
-                                            <rect key="frame" x="234" y="44" width="103" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exy-iu-fHa">
                                             <rect key="frame" x="128" y="69" width="107" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place               " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOv-YP-6tc">
+                                            <rect key="frame" x="38" y="41" width="299" height="20"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -73,7 +72,10 @@
                                         <constraint firstItem="Xfx-5V-qiO" firstAttribute="top" secondItem="Njp-Q4-tPd" secondAttribute="top" constant="11" id="Wif-Hg-ODi"/>
                                         <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Exy-iu-fHa" secondAttribute="trailing" constant="140" id="bLL-do-rmW"/>
                                         <constraint firstItem="Xfx-5V-qiO" firstAttribute="leading" secondItem="c7S-ga-0S8" secondAttribute="trailing" constant="19" id="efV-u5-vK2"/>
+                                        <constraint firstItem="zOv-YP-6tc" firstAttribute="top" secondItem="Njp-Q4-tPd" secondAttribute="top" constant="41" id="g9P-rv-cOk"/>
+                                        <constraint firstAttribute="trailing" secondItem="zOv-YP-6tc" secondAttribute="trailing" constant="38" id="hBc-NR-oO4"/>
                                         <constraint firstItem="c7S-ga-0S8" firstAttribute="top" secondItem="Njp-Q4-tPd" secondAttribute="top" constant="1.0000000000001137" id="uhV-nd-1f3"/>
+                                        <constraint firstItem="zOv-YP-6tc" firstAttribute="centerX" secondItem="Njp-Q4-tPd" secondAttribute="centerX" id="yX5-Wj-a3V"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -116,6 +118,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" secondItem="aKp-mF-XXJ" secondAttribute="width" multiplier="205:270" id="fOM-BY-wS5"/>
                                 </constraints>
+                                <viewLayoutGuide key="safeArea" id="99c-1L-pQY"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LblDish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TA-Bm-6Xm">
                                 <rect key="frame" x="14" y="302" width="345" height="33"/>
