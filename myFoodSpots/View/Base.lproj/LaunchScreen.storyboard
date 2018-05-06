@@ -69,14 +69,19 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PPb-6J-XtM">
+                                <rect key="frame" x="177" y="333.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aqm-qE-77k" secondAttribute="trailing" id="49y-Dc-ZHe"/>
                             <constraint firstItem="xBo-S6-lgc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="5e9-Wm-kJJ"/>
+                            <constraint firstItem="PPb-6J-XtM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8hu-F4-yAJ"/>
                             <constraint firstItem="Lbo-XU-Bih" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="1.4" id="DkO-wV-WMZ"/>
                             <constraint firstItem="aqm-qE-77k" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="H1f-CL-Pl8"/>
                             <constraint firstItem="Lbo-XU-Bih" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JR1-98-rZY"/>
+                            <constraint firstItem="PPb-6J-XtM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MpT-QA-Vej"/>
                             <constraint firstItem="xBo-S6-lgc" firstAttribute="top" secondItem="Lbo-XU-Bih" secondAttribute="bottom" constant="50.5" id="SPr-9g-5vP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tUm-Ng-lFq" secondAttribute="trailing" constant="47.000000000000057" id="WOh-FW-ppS"/>
                             <constraint firstItem="aqm-qE-77k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cfB-R2-ZHP"/>

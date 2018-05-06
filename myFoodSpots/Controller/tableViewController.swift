@@ -22,7 +22,7 @@ class tableViewController: UITableViewController {
         let backgroundImageAux = UIImage(named: "hipster")
         let imageViewAux = UIImageView(image: backgroundImageAux)
         self.tableView.backgroundView = imageViewAux
-        
+        //
         let spot1 = Spots(restaurant: " O'Petit Ecuador ", dish: "Shrimp Ceviche", place:" Paris I ", description: "A tipical dish from Ecuador made with shrimps, served cold. PD: remember to bring some friends here for celebrating a birthday or something.", image: "ceviche")
         let spot2 = Spots(restaurant: " Au Bureau ", dish: "Hamburguers", place:" Suresnes ", description: "Lots of different types of hamburguers, served in stone dishes with the classic french fries and some sauce. PD: remember to bring some friends here for celebrating a birthday or something.", image: "hamburguesa")
         let spot3 = Spots(restaurant: " MachuPisco ", dish: "Maracuja Pisco Sour", place:" Paris II ", description: "A drink with Pisco from Perú and south-American exotic fruits. PD: remember to bring some friends here for celebrating a birthday or something.", image: "pisco")
@@ -33,7 +33,7 @@ class tableViewController: UITableViewController {
         let spot8 = Spots(restaurant: " Le Bonheur ", dish: "Pekin style rice", place:" Suresnes ", description: "Variation of the traditional rice, with ham, chicken, veggies and other stuff.", image: "rice")
         let spot9 = Spots(restaurant: " La cantina ", dish: "Pizza 4 formaggi", place:" Paris XV ", description: "Pizza with 4 different types of cheese, served with bread, salads, look out for promos to get a free drink (wines, beers)", image: "quesos")
         let spot10 = Spots(restaurant: " Elysees Hong-Kong ", dish: "Dumplings", place:" Paris XV ", description: "Mix of different dumplings, classic chinesse style, comes with a spicy sauce, great spot to go.", image: "dumplings")
-        
+        // Add hard coded "spots" to an Array
         spotsArray.append(spot1)
         spotsArray.append(spot2)
         spotsArray.append(spot3)
@@ -47,7 +47,6 @@ class tableViewController: UITableViewController {
     
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -60,22 +59,20 @@ class tableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return spotsArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! customTableViewCell
-       
-        // For round corners
+        // For round corners & transparency
         cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
         cell.layer.cornerRadius = cell.frame.height / 2.5
+        //
         cell.myImage?.image = UIImage(named: (spotsArray[indexPath.row].image)!)
         cell.Dish?.text = spotsArray[indexPath.row].dish
         cell.Restaurant?.text = spotsArray[indexPath.row].restaurant
@@ -85,7 +82,6 @@ class tableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //clickedIndex = indexPath
         selected = spotsArray[indexPath.row]
         self.performSegue(withIdentifier: "detailSegue", sender: self)
     }
@@ -94,17 +90,7 @@ class tableViewController: UITableViewController {
         let detailVC = segue.destination as! detailViewController
         detailVC.spot = selected
     }
-    /*
-    override func viewWillAppear(_ animated: Bool) {
 
-        //self.clearsSelectionOnViewWillAppear = self.splitViewController?.isCollapsed
-        //super.viewWillAppear(animated)
-            
-        // Add a background view to the table view
-        let backgroundImage = UIImage(named: "blackWall")
-        let imageView = UIImageView(image: backgroundImage)
-        self.tableView.backgroundView = imageView
-    }*/
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
