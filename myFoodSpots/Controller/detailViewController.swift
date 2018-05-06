@@ -20,8 +20,6 @@ class detailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let backgroundImage = UIImage(named: "hipster")
-        //myView = UIImageView(image: backgroundImage)
         lblDish.text = spot?.dish
         lblRestaurant.text = spot?.restaurant
         lblPlace.text = spot?.place
