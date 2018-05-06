@@ -1,9 +1,9 @@
 //
 //  detailViewController.swift
-//  iOS
+//  myFoodSpots
 //
-//  Created by epita on 29/03/2018.
-//  Copyright © 2018 epita. All rights reserved.
+//  Created by Stefano on 28/03/2018.
+//  Copyright © 2018 Stefano. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,6 @@ class detailViewController: UIViewController {
 
     var spot : Spots?
     
-    @IBOutlet weak var myView: UIView!
     @IBOutlet weak var lblDish: UILabel!
     @IBOutlet weak var lblRestaurant: UILabel!
     @IBOutlet weak var lblPlace: UILabel!
@@ -21,8 +20,8 @@ class detailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImage(named: "hipster")
-        myView = UIImageView(image: backgroundImage)
+        //let backgroundImage = UIImage(named: "hipster")
+        //myView = UIImageView(image: backgroundImage)
         lblDish.text = spot?.dish
         lblRestaurant.text = spot?.restaurant
         lblPlace.text = spot?.place

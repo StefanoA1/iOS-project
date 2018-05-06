@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  iOS
+//  myFoodSpots
 //
-//  Created by epita on 28/03/2018.
-//  Copyright © 2018 epita. All rights reserved.
+//  Created by Stefano on 28/03/2018.
+//  Copyright © 2018 Stefano. All rights reserved.
 //
 
 import UIKit

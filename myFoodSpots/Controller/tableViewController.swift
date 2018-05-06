@@ -1,16 +1,15 @@
 //
 //  tableViewController.swift
-//  iOS
+//  myFoodSpots
 //
-//  Created by epita on 28/03/2018.
-//  Copyright © 2018 epita. All rights reserved.
+//  Created by Stefano on 28/03/2018.
+//  Copyright © 2018 Stefano. All rights reserved.
 //
 
 import UIKit
 
 class tableViewController: UITableViewController {
     
-    //@IBOutlet var myTableView: UITableView!
     @IBOutlet var myTableView: UITableView!
     
     var spotsArray : [Spots] = []
@@ -19,23 +18,24 @@ class tableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImage(named: "hipster")
-        let imageView = UIImageView(image: backgroundImage)
-        self.tableView.backgroundView = imageView
-        let spot1 = Spots(restaurant: "O'Petit Ecuador", dish: "Shrimp Ceviche", place:"Paris I", description: "A tipical dish from Ecuador made with shrimps, served cold. PD: remember to bring some friends here for celebrating a birthday or something.", image: "ceviche")
-        let spot2 = Spots(restaurant: "Au Bureau", dish: "Hamburguers", place:"1999", description: "Lots of different types of hamburguers, served in stone dishes with the classic french fries and some sauce. PD: remember to bring some friends here for celebrating a birthday or something.", image: "hamburguesa")
-        /*let spot3 = Spots(restaurant: "MachuPisco", dish: "Maracuja Pisco Sour", place:"Paris II", description: "A drink with Pisco from Perú and south-American exotic fruits. PD: remember to bring some friends here for celebrating a birthday or something.")
-        let spot4 = Spots(restaurant: "O'Petit resto", dish: "Grilled salmon", place:"Suresnes", description: "Grilled piece of salmon with vegetables, served with some sauces that depends on your choice. PD: remember to bring some friends here for celebrating a birthday or something.")
-        let spot5 = Spots(restaurant: "O'Jardin Secret", dish: "Pizza Royale", place:"Suresnes", description: "Pizza with 2 types of chesse, ham, mushrooms, olives, tomatoes, artichokes.")
-        let spot6 = Spots(restaurant: "El Guacamole", dish: "Tacos", place:"Paris X", description: "3 Tacos from different choices, served with a drink, fast food restaurant")
-        let spot7 = Spots(restaurant: "L'heure des Mets", dish: "Big Baba au rhum", place:"1999", description: "A very sweet dessert, french style served with additional stuff deppending on the day.")
-        let spot8 = Spots(restaurant: "Le Bonheur", dish: "Pekin style rice", place:"Suresnes", description: "Variation of the traditional rice, with ham, chicken, veggies and other stuff.")
-        let spot9 = Spots(restaurant: "La cantina", dish: "Pizza 4 formaggi", place:"Paris XV", description: "Pizza with 4 different types of cheese, served with bread, salads, look out for promos to get a free drink (wines, beers)")
-        let spot10 = Spots(restaurant: "Elysees Hong-Kong", dish: "Dumplings", place:"Paris XV", description: "Mix of different dumplings, classic chinesse style, comes with a spicy sauce, great spot to go.")
-        */
+        // Set a background
+        let backgroundImageAux = UIImage(named: "hipster")
+        let imageViewAux = UIImageView(image: backgroundImageAux)
+        self.tableView.backgroundView = imageViewAux
+        
+        let spot1 = Spots(restaurant: " O'Petit Ecuador ", dish: "Shrimp Ceviche", place:" Paris I ", description: "A tipical dish from Ecuador made with shrimps, served cold. PD: remember to bring some friends here for celebrating a birthday or something.", image: "ceviche")
+        let spot2 = Spots(restaurant: " Au Bureau ", dish: "Hamburguers", place:" Suresnes ", description: "Lots of different types of hamburguers, served in stone dishes with the classic french fries and some sauce. PD: remember to bring some friends here for celebrating a birthday or something.", image: "hamburguesa")
+        let spot3 = Spots(restaurant: " MachuPisco ", dish: "Maracuja Pisco Sour", place:" Paris II ", description: "A drink with Pisco from Perú and south-American exotic fruits. PD: remember to bring some friends here for celebrating a birthday or something.", image: "pisco")
+        let spot4 = Spots(restaurant: " O'Petit resto ", dish: "Grilled salmon", place:" Suresnes ", description: "Grilled piece of salmon with vegetables, served with some sauces that depends on your choice. PD: remember to bring some friends here for celebrating a birthday or something.", image: "salmon")
+        let spot5 = Spots(restaurant: " O'Jardin Secret ", dish: "Pizza Royale", place:" Suresnes ", description: "Pizza with 2 types of chesse, ham, mushrooms, olives, tomatoes, artichokes.", image: "royale")
+        let spot6 = Spots(restaurant: " El Guacamole ", dish: "Tacos", place:" Paris X ", description: "3 Tacos from different choices, served with a drink, fast food restaurant",image: "tacos")
+        let spot7 = Spots(restaurant: "L'heure des Mets ", dish: "Big Baba au rhum", place:"1999", description: "A very sweet dessert, french style served with additional stuff deppending on the day.", image: "bigbaba")
+        let spot8 = Spots(restaurant: " Le Bonheur ", dish: "Pekin style rice", place:" Suresnes ", description: "Variation of the traditional rice, with ham, chicken, veggies and other stuff.", image: "rice")
+        let spot9 = Spots(restaurant: " La cantina ", dish: "Pizza 4 formaggi", place:" Paris XV ", description: "Pizza with 4 different types of cheese, served with bread, salads, look out for promos to get a free drink (wines, beers)", image: "quesos")
+        let spot10 = Spots(restaurant: " Elysees Hong-Kong ", dish: "Dumplings", place:" Paris XV ", description: "Mix of different dumplings, classic chinesse style, comes with a spicy sauce, great spot to go.", image: "dumplings")
+        
         spotsArray.append(spot1)
         spotsArray.append(spot2)
-         /*
         spotsArray.append(spot3)
         spotsArray.append(spot4)
         spotsArray.append(spot5)
@@ -44,7 +44,7 @@ class tableViewController: UITableViewController {
         spotsArray.append(spot8)
         spotsArray.append(spot9)
         spotsArray.append(spot10)
-        */
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -80,6 +80,7 @@ class tableViewController: UITableViewController {
         cell.Dish?.text = spotsArray[indexPath.row].dish
         cell.Restaurant?.text = spotsArray[indexPath.row].restaurant
         cell.Place?.text = spotsArray[indexPath.row].place
+        
         return cell
     }
     

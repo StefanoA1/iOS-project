@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,13 +23,67 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" highlightedImage="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="aqm-qE-77k">
                                 <rect key="frame" x="0.0" y="20" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbo-XU-Bih">
+                                <rect key="frame" x="51.5" y="450.5" width="272" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="- Stéfano Acosta">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="27" name="Verdana-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" -">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="27" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUm-Ng-lFq">
+                                <rect key="frame" x="46" y="498" width="282" height="27"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="stefano.acosta@epita.fr">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="22" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBo-S6-lgc">
+                                <rect key="frame" x="46" y="534" width="282" height="27"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="App: myFoodSpots">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="22" name="Verdana"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aqm-qE-77k" secondAttribute="trailing" id="49y-Dc-ZHe"/>
+                            <constraint firstItem="xBo-S6-lgc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="5e9-Wm-kJJ"/>
+                            <constraint firstItem="Lbo-XU-Bih" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="1.4" id="DkO-wV-WMZ"/>
                             <constraint firstItem="aqm-qE-77k" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="H1f-CL-Pl8"/>
+                            <constraint firstItem="Lbo-XU-Bih" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JR1-98-rZY"/>
+                            <constraint firstItem="xBo-S6-lgc" firstAttribute="top" secondItem="Lbo-XU-Bih" secondAttribute="bottom" constant="50.5" id="SPr-9g-5vP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tUm-Ng-lFq" secondAttribute="trailing" constant="47.000000000000057" id="WOh-FW-ppS"/>
                             <constraint firstItem="aqm-qE-77k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cfB-R2-ZHP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xBo-S6-lgc" secondAttribute="trailing" constant="47.000000000000057" id="tPH-b0-dsK"/>
+                            <constraint firstItem="tUm-Ng-lFq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="ulN-aU-bN0"/>
                             <constraint firstAttribute="bottomMargin" secondItem="aqm-qE-77k" secondAttribute="bottom" constant="-20" id="wid-S3-8Ol"/>
+                            <constraint firstItem="tUm-Ng-lFq" firstAttribute="top" secondItem="Lbo-XU-Bih" secondAttribute="bottom" constant="14.5" id="ykE-Lo-rcD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
